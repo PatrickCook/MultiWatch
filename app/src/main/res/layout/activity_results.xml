@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <Button
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:textSize="40dp"
+            android:textColor="#ffd12010"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:background="#ffe7e7e7"
+            android:enabled="true"
+            android:text="&lt;"
+            android:layout_alignBottom="@+id/refresh" />
+
+        <Button
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/refresh"
+            android:textSize="20dp"
+            android:textColor="#ff24a025"
+            android:layout_marginLeft="0dp"
+            android:background="#ffe7e7e7"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Results"
+            android:id="@+id/ResultsTitle"
+            android:textColor="#ff36bcd5"
+            android:layout_marginLeft="0dp"
+            android:background="#ffe7e7e7"
+            android:clickable="false"
+            android:enabled="false"
+            android:layout_toEndOf="@+id/back"
+            android:layout_toStartOf="@+id/refresh"
+            android:layout_alignBottom="@+id/back" />
+
+
+        <LinearLayout
+            android:id="@+id/resultsLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/ResultsTitle"
+            android:orientation="vertical" >
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

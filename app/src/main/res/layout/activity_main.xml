@@ -1,0 +1,258 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:ignore="MergeRootFrame">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#ffe7e7e7"
+            android:text="+"
+            android:textColor="#ffd01600"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/save"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stopwatches"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:background="#ffdcdcdc"
+            android:text="Save Times"
+            android:textColor="#ff4fb400" />
+
+        <Button
+            android:id="@+id/startAll"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/add"
+            android:layout_toStartOf="@+id/viewResults"
+            android:background="#ffe7e7e7"
+            android:text="Start All"
+            android:textColor="#ff36bcd5" />
+
+        <Button
+            android:id="@+id/viewResults"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="#ffe7e7e7"
+            android:text=">"
+            android:textColor="#ffd12010"
+            android:textSize="40dp"
+            android:layout_alignBottom="@+id/startAll" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/stopwatches"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:ignore="MergeRootFrame">
+        <!-- User 1 -->
+        <EditText
+            android:id="@+id/text1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_column="1"
+            android:layout_marginTop="52dp"
+            android:layout_toStartOf="@+id/chrono1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textSize="30dp" />
+
+        <com.petree.multiwatch.SmartChronometer
+            android:id="@+id/chrono1"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text1"
+            android:layout_alignParentEnd="true"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/start1"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/text1"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:background="@color/green"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/reset1"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/start1"
+            android:layout_below="@+id/text1"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_toStartOf="@+id/start1"
+            android:background="#ffbeff5a"
+            android:text="Reset" />
+
+
+        <!-- User 2 -->
+        <EditText
+            android:id="@+id/text2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/reset1"
+            android:layout_column="1"
+            android:layout_toStartOf="@+id/chrono1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textSize="30dp" />
+
+        <com.petree.multiwatch.SmartChronometer
+            android:id="@+id/chrono2"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reset2"
+            android:layout_alignParentEnd="true"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/start2"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/text2"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:background="@color/green"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/reset2"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/start2"
+            android:layout_below="@+id/text2"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_toStartOf="@+id/start2"
+            android:background="#ffbeff5a"
+            android:text="Reset" />
+
+        <!-- User 3 -->
+        <EditText
+            android:id="@+id/text3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/reset2"
+            android:layout_column="1"
+            android:layout_toStartOf="@+id/chrono1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textSize="30dp" />
+
+        <com.petree.multiwatch.SmartChronometer
+            android:id="@+id/chrono3"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reset3"
+            android:layout_alignParentEnd="true"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/start3"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/text3"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:background="@color/green"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/reset3"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text3"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_toStartOf="@+id/start2"
+            android:background="#ffbeff5a"
+            android:text="Reset" />
+
+        <!-- User 4 -->
+        <EditText
+            android:id="@+id/text4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/reset3"
+            android:layout_column="1"
+            android:layout_toStartOf="@+id/chrono1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textSize="30dp" />
+
+        <com.petree.multiwatch.SmartChronometer
+            android:id="@+id/chrono4"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reset4"
+            android:layout_alignParentEnd="true"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/start4"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/text4"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:background="@color/green"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/reset4"
+            style="@style/button_text"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text4"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_toStartOf="@+id/start2"
+            android:background="#ffbeff5a"
+            android:text="Reset" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
